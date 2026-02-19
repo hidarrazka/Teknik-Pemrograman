@@ -1,0 +1,62 @@
+@startuml
+package "id.ac.polban.employee.model" {
+  class Department {
+    - name: String
+    + Department(name: String)
+    + getName(): String
+    + setName(name: String): void
+  }
+
+  class EmploymentType {
+    - type: String
+    + EmploymentType(type: String)
+    + getType(): String
+    + setType(type: String): void
+  }
+
+  class Employee {
+    - id: int
+    - name: String
+    - department: Department
+    - type: EmploymentType
+    - salary: double
+    + Employee(id: int, name: String, department: Department, type: EmploymentType, salary: double)
+    + getId(): int
+    + setId(id: int): void
+    + getName(): String
+    + setName(name: String): void
+    + getDepartment(): Department
+    + setDepartment(department: Department): void
+    + getType(): EmploymentType
+    + setType(type: EmploymentType): void
+    + getSalary(): double
+    + setSalary(salary: double): void
+    + gEmploymentType(): EmploymentType
+    + displayInfo(): void
+  }
+}
+
+package "id.ac.polban.service" {
+  class EmployeeService {
+    - employees: Map<Integer, Employee>
+    + addEmployee(emp: Employee): void
+    + getEmployee(id: int): Employee
+    + raiseSalary(id: int, percent: double): void
+    + displayAllEmployees(): void
+  }
+
+  class Main {
+    + main(args: String[]): void
+  }
+}
+
+' Hubungan
+EmployeeService --> "1..*" Employee : contains
+Employee --> "1" Department
+Employee --> "1" EmploymentType
+Main ..> EmployeeService : uses
+Main ..> Department : uses
+Main ..> EmploymentType : uses
+Main ..> Employee : uses
+
+@enduml

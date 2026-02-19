@@ -6,6 +6,9 @@ public class Employee {
     private Department department;
     private EmploymentType type;
     private double salary;
+
+    // Static field untuk hitung jumlah employee
+    private static int totalEmployees = 0;
     
     public Employee(int id, String name, Department department, EmploymentType type, double salary) {
         this.id = id;
@@ -13,8 +16,12 @@ public class Employee {
         this.department = department;
         this.type = type;
         this.salary = salary;
+        totalEmployees++;
     }
- 
+    // Static method untuk mendapatkan total employee
+    public static int getTotalEmployees() {
+        return totalEmployees;
+    }
  
     public int getId() {
         return id;

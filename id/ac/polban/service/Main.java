@@ -29,5 +29,6 @@ public class Main {
 
         System.out.println("=== Setelah Kenaikan Gaji 10% untuk ID 1 ===");
         service.displayAllEmployees();
+        service.raiseSalary(2,150);
     }
 }

@@ -28,11 +28,10 @@ public class EmployeeService {
             emp.displayInfo();
         }
     }
-    public enum EmploymentType {
-    FULL_TIME,
-    PART_TIME,
-    CONTRACT
-}
+    // static untuk validasi persen
+    public static boolean isValidPercent(double percent){
+        return percent > 0 && percent <= 100;
+    }
 
 }
 

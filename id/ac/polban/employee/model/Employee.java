@@ -10,12 +10,12 @@ public class Employee {
     // Static field untuk hitung jumlah employee
     private static int totalEmployees = 0;
     
-    public Employee(int id, String name, Department department, EmploymentType type, double salary) {
-        this.id = id;
-        this.name = name;
-        this.department = department;
-        this.type = type;
-        this.salary = salary;
+    public Employee(int ids, String names, Department departments, EmploymentType types, double salarys) {
+        this.id = ids;
+        this.name = names;
+        this.department = departments;
+        this.type = types;
+        this.salary = salarys;
         totalEmployees++;
     }
     // Static method untuk mendapatkan total employee

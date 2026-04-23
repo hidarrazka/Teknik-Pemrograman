@@ -3,9 +3,8 @@ public class Commission extends Hourly
     private double totalSales;
     private double comissionRate;
     public Commission(String eName, String eAddress, String ePhone,String socSecNumber, double rate, double comissionRate){
-        super(eName, eAddress, ePhone, socSecNumber,rate);
-        this.comissionRate = rate;
-        
+        super(eName, eAddress, ePhone, socSecNumber, rate);
+        this.comissionRate = comissionRate;
     }
     public void addSales(double totalSales){
         this.totalSales += totalSales;

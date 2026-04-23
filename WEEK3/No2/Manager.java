@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-class Manager extends Employee {
+public class Manager extends Employee {
     private String secretaryName;
 
     public Manager(String n, double s, int d, int m, int y) {
@@ -21,5 +21,9 @@ class Manager extends Employee {
 
     public String getSecretaryName() {
         return secretaryName;
+    }
+
+    public void setSecretaryName(String secretaryName) {
+        this.secretaryName = secretaryName;
     }
 }
